@@ -10,15 +10,19 @@ import express, {type Application} from 'express'
 
 class App{
     public app:Application;
-
     constructor(){
         this.app = express()
     }
-
 }
 const app = new App().app
-app.listen(8080, () =>{
-    console.log('hehe')
+const port = 8080
+
+app.get("/", (req, res) => {
+    res.send("CRUD Sederhana dengan TypeScript !");
+  });
+
+app.listen(port, () =>{
+    console.log(`Listening on port ${port}`)
 })
 
 
