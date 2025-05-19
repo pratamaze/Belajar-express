@@ -28,7 +28,7 @@ import type { Request, Response } from 'express';
         let id = req.params.id as string;
         const id_new = parseInt(id)
 
-        // documentation 
+        // reference 
         // https://stackoverflow.com/questions/54496398/typescript-type-string-undefined-is-not-assignable-to-type-string
         
         const item = items.find(item => item.id === id_new);
